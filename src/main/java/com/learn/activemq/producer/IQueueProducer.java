@@ -1,10 +1,10 @@
 package com.learn.activemq.producer;
-import com.learn.activemq.dto.SystemMessage;
+import com.learn.activemq.dto.NotificationMessage;
 
 
 
 public interface IQueueProducer {
 
-    public void publishMessage(SystemMessage systemMessage);
+    public void publishMessage(NotificationMessage notificationMessage);
 
 }

@@ -1,5 +1,5 @@
 package com.learn.activemq.api;
-import com.learn.activemq.dto.SystemMessage;
+import com.learn.activemq.dto.NotificationMessage;
 import com.learn.activemq.producer.AmqProducer;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 
-//Main API
 @RestController
 @RequestMapping(value = "/amq")
 @Slf4j
@@ -26,11 +25,11 @@ public class AmqController {
 
 
     @PostMapping("/publishMessage")
-    public ResponseEntity<String> publishMessage(@RequestBody SystemMessage systemMessage){
+    public ResponseEntity<String> publishMessage(@RequestBody NotificationMessage notificationMessage){
         try{
-            amqProducer.publishMessage(systemMessage);
+            amqProducer.publishMessage(notificationMessage);
         }catch (Exception e){
-            log.error("Failed to publish message: "+systemMessage);
+            log.error("Failed to publish message: "+ notificationMessage);
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
         return new ResponseEntity<>("Sent",HttpStatus.OK);

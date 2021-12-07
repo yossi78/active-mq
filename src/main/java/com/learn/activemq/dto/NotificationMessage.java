@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 
 @Data
-public class SystemMessage implements Serializable{
+public class NotificationMessage implements Serializable{
 
     private String source;
     private String message;
@@ -12,7 +12,7 @@ public class SystemMessage implements Serializable{
 
     @Override
     public String toString() {
-        return "{system_message__source="+source + "___message="+message+"}";
+        return "{notification_message__source="+source + "___message="+message+"}";
     }
 
 
