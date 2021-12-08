@@ -1,5 +1,3 @@
-# active-mq
-
 
 #) INSTRUCTIONS
 
