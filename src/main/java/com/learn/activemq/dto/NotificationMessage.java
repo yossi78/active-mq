@@ -1,19 +1,24 @@
 package com.learn.activemq.dto;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 
 
-@Data
-public class NotificationMessage implements Serializable{
 
-    private String source;
-    private String message;
+public class NotificationMessage extends BaseMessage implements Serializable{
 
 
-    @Override
-    public String toString() {
-        return "{notification_message__source="+source + "___message="+message+"}";
+
+    public NotificationMessage(String source,String message){
+        super(source, message);
     }
+
+//    @Override
+//    public String toString() {
+//        return "{notification_message__source="+source + "___message="+message+"}";
+//    }
 
 
 }
