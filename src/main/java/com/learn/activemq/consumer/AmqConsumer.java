@@ -13,7 +13,7 @@ public class AmqConsumer implements IQueueConsumer{
 
 
     @Override
-    @JmsListener(destination = "${spring.activemq.queue.name}")
+    @JmsListener(destination = "${spring.activemq.queue.name}",containerFactory = "activeMqJmsListenerContainerFactory")
     public void messageListener(NotificationMessage message) {
         log.info("CONSUME_MESSAGE="+message.toString());
     }
