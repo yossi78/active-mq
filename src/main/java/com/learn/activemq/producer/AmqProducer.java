@@ -1,5 +1,5 @@
 package com.learn.activemq.producer;
-import com.learn.activemq.dto.NotificationMessage;
+import com.learn.activemq.model.MsTemplateMessage;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -26,9 +26,9 @@ public class AmqProducer implements IQueueProducer{
 
 
     @Override
-    public void publishMessage(NotificationMessage notificationMessage) {
-        log.info("PUBLISH_MESSAGE="+ notificationMessage.toString());
-        jmsTemplate.convertAndSend(queueName, notificationMessage);
+    public void publishMessage(MsTemplateMessage msTemplateMessage) {
+        log.info("PUBLISH_MESSAGE="+ msTemplateMessage.toString());
+        jmsTemplate.convertAndSend(queueName, msTemplateMessage);
     }
 
 

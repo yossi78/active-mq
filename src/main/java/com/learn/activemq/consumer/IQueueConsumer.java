@@ -1,10 +1,10 @@
 package com.learn.activemq.consumer;
-import com.learn.activemq.dto.NotificationMessage;
+import com.learn.activemq.model.BaseMessage;
 
 
 
 public interface IQueueConsumer {
 
-    public void messageListener(NotificationMessage message);
+    public void messageListener(BaseMessage baseMessage);
 
 }

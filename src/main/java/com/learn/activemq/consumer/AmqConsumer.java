@@ -1,5 +1,5 @@
 package com.learn.activemq.consumer;
-import com.learn.activemq.dto.NotificationMessage;
+import com.learn.activemq.model.BaseMessage;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
@@ -14,8 +14,8 @@ public class AmqConsumer implements IQueueConsumer{
 
     @Override
     @JmsListener(destination = "${spring.activemq.queue.name}",containerFactory = "activeMqJmsListenerContainerFactory")
-    public void messageListener(NotificationMessage message) {
-        log.info("CONSUME_MESSAGE="+message.toString());
+    public void messageListener(BaseMessage baseMessage) {
+        log.info("CONSUME_MESSAGE="+baseMessage.toString());
     }
 
 }

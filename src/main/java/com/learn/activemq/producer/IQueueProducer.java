@@ -1,10 +1,9 @@
 package com.learn.activemq.producer;
-import com.learn.activemq.dto.NotificationMessage;
 
-
+import com.learn.activemq.model.MsTemplateMessage;
 
 public interface IQueueProducer {
 
-    public void publishMessage(NotificationMessage notificationMessage);
+    public void publishMessage(MsTemplateMessage msTemplateMessage);
 
 }
