@@ -7,10 +7,9 @@ import org.springframework.jms.annotation.EnableJms;
 import org.springframework.jms.config.DefaultJmsListenerContainerFactory;
 import org.springframework.jms.connection.CachingConnectionFactory;
 import org.springframework.jms.core.JmsTemplate;
-
 import javax.jms.ConnectionFactory;
-import java.util.ArrayList;
-import java.util.Arrays;
+
+
 
 
 @Configuration
