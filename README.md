@@ -5,7 +5,7 @@
 
 #) Run the following CURL to publish message: 
 
-curl --location --request POST 'http://localhost:8080/amq/publishMessage' \
+curl --location --request POST 'http://localhost:8095/amq/publishMessage' \
 --header 'Content-Type: application/json' \
 --data-raw '{
 "source" : "D" ,
