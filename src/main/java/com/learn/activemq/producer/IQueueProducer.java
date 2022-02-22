@@ -1,9 +1,11 @@
 package com.learn.activemq.producer;
+import com.learn.activemq.model.Messagable;
 
-import com.learn.activemq.model.MsTemplateMessage;
+
+
 
 public interface IQueueProducer {
 
-    public void publishMessage(MsTemplateMessage msTemplateMessage);
+    public void publishMessage(Messagable message);
 
 }

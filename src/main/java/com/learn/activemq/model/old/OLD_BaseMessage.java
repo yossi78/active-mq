@@ -1,4 +1,4 @@
-package com.learn.activemq.model;
+package com.learn.activemq.model.old;
 import lombok.*;
 import java.io.Serializable;
 
@@ -6,7 +6,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public abstract class BaseMessage implements IMsTemplateMessage, Serializable {
+public abstract class OLD_BaseMessage implements IMsTemplateMessage, Serializable {
 
     protected String operation;
     protected String message;

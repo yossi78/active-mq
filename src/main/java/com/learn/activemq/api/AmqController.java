@@ -1,5 +1,7 @@
 package com.learn.activemq.api;
-import com.learn.activemq.model.MsTemplateMessage;
+import com.learn.activemq.model.Messagable;
+import com.learn.activemq.model.OperationInstallationDurationMessage;
+import com.learn.activemq.model.old.MsTemplateMessageOLD;
 import com.learn.activemq.producer.AmqProducer;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -26,11 +28,11 @@ public class AmqController {
 
 
     @PostMapping("/publishMessage")
-    public ResponseEntity<String> publishMessage(@RequestBody MsTemplateMessage msTemplateMessage){
+    public ResponseEntity<String> publishMessage(@RequestBody OperationInstallationDurationMessage operationInstallationDurationMessage){
         try{
-            amqProducer.publishMessage(msTemplateMessage);
+            amqProducer.publishMessage(operationInstallationDurationMessage);
         }catch (Exception e){
-            log.error("Failed to publish message: "+ msTemplateMessage);
+            log.error("Failed to publish message: "+ operationInstallationDurationMessage.toJson());
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
         return new ResponseEntity<>("Sent",HttpStatus.OK);

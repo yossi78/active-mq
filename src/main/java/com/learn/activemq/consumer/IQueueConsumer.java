@@ -1,10 +1,11 @@
 package com.learn.activemq.consumer;
-import com.learn.activemq.model.BaseMessage;
+import com.learn.activemq.model.Messagable;
+import com.learn.activemq.model.old.OLD_BaseMessage;
 
 
 
 public interface IQueueConsumer {
 
-    public void messageListener(BaseMessage baseMessage);
+    public void messageListener(Messagable message);
 
 }
