@@ -1,5 +1,4 @@
 package com.example.active_mq.api;
-
 import com.example.active_mq.entity.UserEntity;
 import com.example.active_mq.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +12,6 @@ public class UserController {
     private UserService userService;
 
     @PostMapping
-
     public void addUser(@RequestBody UserEntity user) {
         userService.addUser(user);
     }
