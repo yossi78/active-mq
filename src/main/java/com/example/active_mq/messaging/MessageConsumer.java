@@ -1,5 +1,4 @@
 package com.example.active_mq.messaging;
-
 import com.example.active_mq.entity.UserEntity;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;

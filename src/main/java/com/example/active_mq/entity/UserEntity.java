@@ -1,5 +1,4 @@
 package com.example.active_mq.entity;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;

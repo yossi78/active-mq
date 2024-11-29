@@ -1,5 +1,4 @@
 package com.example.active_mq.service;
-
 import com.example.active_mq.entity.UserEntity;
 import com.example.active_mq.messaging.MessageConsumer;
 import com.example.active_mq.messaging.MessagePublisher;
